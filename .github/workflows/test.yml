@@ -1,0 +1,38 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+  pull_request:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  lab:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        # lab number to test against
+        ci_lab: ["01"]
+        # set N-1 indexes for parallel jobs
+        # When you run 2 parallel jobs then first job will have index 0, the second job will have index 1 etc
+        # tests to run on a given lab
+        ci_node_index: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Lab${{ matrix.ci_lab }} Test ${{ matrix.ci_node_index }}
+        run: |
+          cat lab${{ matrix.ci_lab }}/tests/arq${{ matrix.ci_node_index }}.in | python lab${{ matrix.ci_lab }}/lab${{ matrix.ci_lab }}.py > lab${{ matrix.ci_lab }}/tests/res${{ matrix.ci_node_index }}.out
+          diff lab${{ matrix.ci_lab }}/tests/res${{ matrix.ci_node_index }}.out lab${{ matrix.ci_lab }}/tests/arq${{ matrix.ci_node_index }}.out
