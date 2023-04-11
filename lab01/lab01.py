@@ -5,14 +5,14 @@
 # RA: 
 ###################################################
 
-a = int(input())
-b = int(input())
+a = int(input("Digite o valor de a: "))
+b = int(input("Digite o valor de b: "))
 
 print("a =", a)
-print("b  =", b)
+print("b =", b)
 print("a + b =", a + b)
-print("a - b =", b - a)
+print("a - b =", a - b)
 print("a * b =", a * b)
 print("a ** b =", a ** b)
-print("a % b =", a % b)
 print("a // b =", a // b)
+print("a % b =", a % b)
