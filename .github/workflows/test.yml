@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         # lab number to test against
-        ci_lab: ["01"]
+        ci_lab: ["01", "02", "03", "04", "05", "06"]
         # set N-1 indexes for parallel jobs
         # When you run 2 parallel jobs then first job will have index 0, the second job will have index 1 etc
         # tests to run on a given lab
