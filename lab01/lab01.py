@@ -5,8 +5,8 @@
 # RA: 
 ###################################################
 
-a = int(input("Digite o valor de a: "))
-b = int(input("Digite o valor de b: "))
+a = int(input())
+b = int(input())
 
 print("a =", a)
 print("b =", b)
