@@ -47,16 +47,16 @@ else:
 
 # Impressão da resposta
 
-   if horario1 >= 23:
+   if (horario1 >= 23):
         print(nao)
         
     else:
         horario2 += ddv2
 
-        if horario2 >= 23:
+        if (horario2 >= 23):
             print(nao)
 
-        elif horario2 <= horario1:
+        elif (horario2 <= horario1):
             print(nao)
         
         else:
