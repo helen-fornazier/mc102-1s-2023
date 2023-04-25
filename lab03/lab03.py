@@ -13,7 +13,6 @@ defesa = int(input())
 gold = int(input())
 missao = int()
 
-
 # Escolha da missão
 
 if ((nivel >= 5) and (ataque >= 40) and (defesa >= 50) and (gold >= 50)):
@@ -37,14 +36,10 @@ elif ((nivel >= 3) and (ataque >= 20) and (defesa >= 30)):
 elif ((nivel >= 5) and (defesa >= 50)):
     gold += 30
     missao = 6
-    print("Missão escolhida: ")
-    print("Moedas de ouro: ", gold)
     
 elif ((ataque >= 30) and (defesa >= 10)):
     gold += 25
     missao = 1
-    print("Missão escolhida: ", missao)
-    print("Moedas de ouro: ", gold)
 
 elif ((nivel >= 3) and (gold >= 20)):
     gold -= 20
