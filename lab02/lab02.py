@@ -7,26 +7,26 @@
 
 # Leitura de dados
 
-x1 = int(input("Digite a hora (0-23): "))
+x1 = int()
 if x1 >= 24:
     x1 = 0
-y1 = int(input("Digite os minutos (0-59): "))
+y1 = int()
 if y1 >= 60:
     y1 = 0
-w1 = int(input("Digite a distância: "))
-z1 = int(input("Digite a velocidade (km/h): "))
+w1 = int()
+z1 = int()
 yf1 = float(y1/100)
 ddv1 = float (w1/z1)
 horario1 = float(x1+yf1)
 
-x2 = int(input("Digite a hora (0-23): "))
+x2 = int()
 if x2 >= 24:
     x2 = 0
-y2 = int(input("Digite os minutos (0-59): "))
+y2 = int()
 if y2 >= 60:
     y2 = 0
-w2 = int(input("Digite a distância: "))
-z2 = int(input("Digite a velocidade (km/h): "))
+w2 = int()
+z2 = int(input()
 yf2 = float(y2/100)
 ddv2 = float (w2/z2)
 horario2 = float(x2+yf2)
